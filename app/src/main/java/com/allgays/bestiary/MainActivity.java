@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         firebaseFirestore = FirebaseFirestore.getInstance();
         recyclerView = findViewById(R.id.recycler);
         //Query
-        Query query = firebaseFirestore.collection("Monsters");
+        Query query = firebaseFirestore.collection("Monsters").orderBy("monster_name");
         //RecyclerOptions
         FirestoreRecyclerOptions<Monster> options = new FirestoreRecyclerOptions.Builder<Monster>()
                 .setQuery(query, Monster.class)
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @NonNull
             @Override
             public MonsterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.monster_item, parent, false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_monster, parent, false);
                 return new MonsterViewHolder(view);
             }
             @Override
@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
             super(itemView);
 
             monster_name = itemView.findViewById(R.id.item_name);
-            monster_type = itemView.findViewById(R.id.item_type);;
-            monster_danger = itemView.findViewById(R.id.item_danger);;
+            monster_type = itemView.findViewById(R.id.item_type);
+            monster_danger = itemView.findViewById(R.id.item_danger);
         }
     }
 
