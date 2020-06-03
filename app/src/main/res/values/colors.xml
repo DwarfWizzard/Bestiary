@@ -6,4 +6,5 @@
     <color name="black">#000000</color>
     <color name="paper">#95C68B76</color>
     <color name="paper_light">#95F4B39C</color>
+    <color name="white">#FFFFFF</color>
 </resources>
