@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/eb_garamond"
         android:text="TextView"
-        android:paddingStart="15dp"
+        android:paddingStart="5dp"
         android:paddingBottom="10dp"
         android:textColor="@color/black"
         android:textSize="20sp"
